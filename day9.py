@@ -10,7 +10,7 @@ def part_2(numlist, target):
                 answer = sorted(numlist[b:a])
                 return answer[0] + answer[-1]
 
-def part_1():
+def part_1_2():
     """look through list of nums and figure out if previous X don't add together"""
     with open('9.txt') as f:
         part_1 = 0
@@ -35,4 +35,4 @@ def part_1():
         print("part 2, ", part_2([int(num) for num in f], part_1))
 
 if __name__ == "__main__":
-    part_1()
+    part_1_2()
