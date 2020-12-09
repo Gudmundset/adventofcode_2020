@@ -1,8 +1,5 @@
 #!/usr/bin/python
 
-import sys
-import time
-
 from collections import deque
 from itertools import combinations
 
