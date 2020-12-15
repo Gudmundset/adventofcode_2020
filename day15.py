@@ -12,14 +12,17 @@ def part_1_2():
     # example_input = [2,3,1]
     # example_input = [3,2,1]
     # example_input = [3,1,2]
-    final_input = [1,12,0,20,8,16]
+    part_1_2_input = [1,12,0,20,8,16]
+    #example_input = [0,3,6]
 
-    the_list = final_input
+    the_list = part_1_2_input
     mem_dict = {a:0 for a in the_list}
     memory = []
     firstseen = False
+    # rangenum = 2020
+    rangenum = 30000000
 
-    for i in range(0,2020):
+    for i in range(0,rangenum):
         if i < len(the_list):
             turn = the_list[i]
         else: 
@@ -27,7 +30,7 @@ def part_1_2():
                 turn = 0
                 mem_dict[turn] = i
                 memory.append(turn)
-                print(f"Turn {i+1}: ", turn)
+                # print(f"Turn {i+1}: ", turn)
                 firstseen = True
                 continue
             else:
@@ -41,7 +44,8 @@ def part_1_2():
                 if not turn in mem_dict:
                     firstseen = False
                 mem_dict[turn] = i
-        print(f"Turn {i+1}: ", turn)
+        if i == rangenum:
+            print(f"Turn {i+1}: ", turn)
         memory.append(turn)
         
           
